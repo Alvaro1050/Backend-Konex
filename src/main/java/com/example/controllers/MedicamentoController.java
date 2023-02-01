@@ -7,9 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @Controller
+@CrossOrigin(origins = "*")
 @RequestMapping("/medicamento")
 public class MedicamentoController {
 
@@ -22,7 +24,15 @@ public class MedicamentoController {
         return ResponseEntity.ok(medicamento);
     }
 
+    @GetMapping("/find/{id}")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<Optional<Medicamento>> findMedicamentoById(@PathVariable Long id) {
+        Optional<Medicamento> medicamento = medicamentoService.findMedicamentoById(id);
+        return ResponseEntity.ok(medicamento);
+    }
+
     @GetMapping("/find")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<List<Medicamento>> findAllMedicamento() {
         List<Medicamento> medicamentos = medicamentoService.findAllMedicamento();
         return ResponseEntity.ok(medicamentos);

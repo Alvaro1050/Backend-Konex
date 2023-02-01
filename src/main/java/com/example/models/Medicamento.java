@@ -15,8 +15,9 @@ public class Medicamento {
     private String nombre;
     private String laboratorio;
 
-    private Date fecha_fabricacion;
-    private Date fecha_vencimiento;
+    private String fecha_fabricacion;
+    private String fecha_vencimiento;
+
     private Long cantidad;
     private Long valor_unitario;
 
@@ -44,19 +45,19 @@ public class Medicamento {
         this.laboratorio = laboratorio;
     }
 
-    public Date getFecha_fabricacion() {
+    public String getFecha_fabricacion() {
         return fecha_fabricacion;
     }
 
-    public void setFecha_fabricacion(Date fecha_fabricacion) {
+    public void setFecha_fabricacion(String fecha_fabricacion) {
         this.fecha_fabricacion = fecha_fabricacion;
     }
 
-    public Date getFecha_vencimiento() {
+    public String getFecha_vencimiento() {
         return fecha_vencimiento;
     }
 
-    public void setFecha_vencimiento(Date fecha_vencimiento) {
+    public void setFecha_vencimiento(String fecha_vencimiento) {
         this.fecha_vencimiento = fecha_vencimiento;
     }
 

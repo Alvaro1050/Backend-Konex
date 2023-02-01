@@ -11,7 +11,7 @@ public class Venta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date fecha_hora;
+    private String fecha_hora;
     private Long medicamento_id;
     private Long cantidad;
     private Long valor_total;
@@ -25,11 +25,11 @@ public class Venta {
         this.id = id;
     }
 
-    public Date getFecha_hora() {
+    public String getFecha_hora() {
         return fecha_hora;
     }
 
-    public void setFecha_hora(Date fecha_hora) {
+    public void setFecha_hora(String fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
 
